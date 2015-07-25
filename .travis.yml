@@ -30,6 +30,7 @@ script:
   - svn co ${pkgbuild_repo} ${srcdir}
   - ln -svf ${PWD} ${srcdir}/${pkgname}
   - cp ${srcdir}/PKGBUILD ~
+  - cp ${srcdir}/depot_tools.install ~
   - msys2-prepare
   - msys2-wrapper "makepkg -s --noconfirm --noprogressbar --noextract --skippgpcheck -f"
 
